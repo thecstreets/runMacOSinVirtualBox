@@ -17,11 +17,12 @@ readonly SCRIPTPATH="$(
   cd "$(dirname "$0")" || exit
   pwd -P
 )"
-readonly INST_VERS="$(find /Applications -maxdepth 1 -type d -name 'Install macOS Mojave*' | wc -l | tr -d '[:space:]')"
-readonly INST_VER="$(find /Applications -maxdepth 1 -type d -name 'Install macOS Mojave*' -print -quit)"
+readonly INST_VERS="1"
+readonly INST_VER="/Applications/Install macOS Mojave.app"
 readonly INST_BIN="$INST_VER/Contents/Resources/createinstallmedia"
 readonly DST_DIR="${DST_DIR:-$HOME/VirtualBox VMs}"
-readonly VM_NAME="${VM_NAME:-macOS-Mojave}"
+readonly VM_NAME="${VM_NAME:-vm-testcsosx3}"
+readonly VM_SERIAL="$VM_NAME"
 readonly VM_DIR="${VM_DIR:-$DST_DIR/$VM_NAME}"
 readonly VM_SIZE="${VM_SIZE:-32768}"
 readonly VM_RES="${VM_RES:-1680x1050}"
